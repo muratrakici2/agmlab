@@ -54,7 +54,6 @@ const HomeScreen = () => {
 
     useEffect(() => {
         if (say === 0) {
-            console.log("hiç bir şey yapma")
         } else {
             if (say<4) {
                 let filtreliListe = filtreliCities.filter((i) => i.county !== search);
@@ -73,11 +72,10 @@ const HomeScreen = () => {
     
                 }
                 setenyakin([...enyakin, filtreliListe[closest]]);
-                let ele = filtreliCities.filter((i,x)=>x!==closest+1);
+                let ele = filtreliListe.filter((i,x)=>x!==closest);
                 setfiltreliCities(ele);
 
                 setsay(s=>s+1);
-                console.log("çalıştı");
             }else{
                 setsay(0)
                 setfiltreliCities(city);
