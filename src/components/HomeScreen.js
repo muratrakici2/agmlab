@@ -64,8 +64,6 @@ const HomeScreen = () => {
                 }
             }
             yakinlar.push({...filtreliListe[closest],"kilometer":minDif});
-            console.log(yakinlar)
-
             filtreli1 = filtreliListe.filter((i, x) => x !== closest);
         }
         setenyakin(yakinlar);
